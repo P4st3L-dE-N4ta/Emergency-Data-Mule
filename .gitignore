@@ -2,7 +2,6 @@
 venv/
 # Separar e Adicionar os das APIS
 cloudBridge/firebase_mqtt_mosquitto.py
-cellularGateway/MqttNBIoT/
-!cellularGateway/MqttNBIoT/MqttNBIoT.ino
+cellularGateway/MqttNBIoT/arduino_secrets.h
 edgeVisionNode/models/
 tests_and_prototypes/NBIoT_versions/
