@@ -77,7 +77,7 @@ except Exception as e:
 # 3. SETUP YOLOv8 & CAMERA
 # ==========================================================
 print("📷 Loading YOLOv8 Model...")
-model = YOLO('yolov8n.pt') 
+model = YOLO('/home/ricardo/Documents/Emergency-Data-Mule/edgeVisionNode/models/yolov8n.pt') 
 
 camera_id = 0 # Using your specified camera ID
 cap = cv2.VideoCapture(camera_id, cv2.CAP_V4L2)

@@ -1,7 +1,5 @@
 # Git Ignore files
-venv/
-# Separar e Adicionar os das APIS
-cloudBridge/firebase_mqtt_mosquitto.py
+venv*
 cellularGateway/MqttNBIoT/arduino_secrets.h
-edgeVisionNode/models/
-tests_and_prototypes/NBIoT_versions/
+edgeVisionNode/models
+cloudBridge/.env

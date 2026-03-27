@@ -3,7 +3,7 @@ from ultralytics import YOLO
 
 # 1. Load the YOLOv8 Nano model (it will auto-download the first time)
 # 'yolov8n.pt' is the fastest model, perfect for real-time video
-model = YOLO('yolov8n.pt') 
+model = YOLO('/home/ricardo/Documents/Emergency-Data-Mule/edgeVisionNode/models/yolov8n.pt') 
 
 # 2. Open the Video Stream (Adapted for Skydroid on Linux)
 camera_id = 2 # Remember to check 'ls -l /dev/video*' in the terminal (usually it's 0 or 2)
