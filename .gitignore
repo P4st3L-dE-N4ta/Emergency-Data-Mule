@@ -3,3 +3,4 @@ venv*
 cellularGateway/MqttNBIoT/arduino_secrets.h
 edgeVisionNode/models
 cloudBridge/.env
+cloudBridge/firebase-service-key.json
