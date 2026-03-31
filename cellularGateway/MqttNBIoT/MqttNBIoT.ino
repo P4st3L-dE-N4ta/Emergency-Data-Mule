@@ -10,8 +10,12 @@ GPRS gprs;
 NB nbAccess;
 
 // MQTT Info
-const char* mqtt_server = "test.mosquitto.org";
-const int port = 1883;
+// const char* mqtt_server = "test.mosquitto.org";
+// const int port = 1883;
+const char* mqtt_server = SECRET_MQTT_SERVER; // Your GCP IP address
+const int port = 1883; 
+const char* mqtt_user = MOSQUITTO_CREDENTIALS_USERNAME;
+const char* mqtt_pass = MOSQUITTO_CREDENTIALS_PASSWORD;
 
 // Give your device a unique ID and set the single JSON topic
 const char* clientID = "Vodafone_Edge_G17_17032026"; 
@@ -25,7 +29,7 @@ void reconnect() {
   while (!client.connected()) {
     Serial.println("Attempting connection to Mosquitto Broker...");
     
-    if (client.connect(clientID)) {
+    if (client.connect(clientID, mqtt_user, mqtt_pass)) {
       Serial.println("🟢 Connected to MQTT Broker!");
       Serial.println("READY"); // Tell Python we are ready!
     } else {
