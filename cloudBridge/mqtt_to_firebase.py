@@ -108,9 +108,6 @@ def fb_stream_handler(event):
 # 4. MAIN LOOP
 # ==========================================
 def main():
-    # Start listening to Firebase for any commands to send down to the Edge
-#    my_stream = db.child("commands").stream(fb_stream_handler, stream_id="edge_commands")
-
     # Start listening to Firebase. In firebase-admin, we use .listen()
     commands_ref = db.reference("commands")
     my_stream = commands_ref.listen(fb_stream_handler)
@@ -118,8 +115,18 @@ def main():
     mqtt_client.on_connect = on_connect
     mqtt_client.on_message = on_message
     
-    print("Connecting to test.mosquitto.org...")
-    mqtt_client.connect('test.mosquitto.org', 1883, 60) 
+    # --- NEW BROKER CONFIGURATION ---
+    broker_ip = os.getenv("MQTT_BROKER_IP")
+    mqtt_user = os.getenv("MQTT_USER")
+    mqtt_password = os.getenv("MQTT_PASSWORD")
+    
+    # Authenticate with the broker
+    mqtt_client.username_pw_set(mqtt_user, mqtt_password)
+    
+    print(f"Connecting to Google Cloud Broker at {broker_ip}...")
+    mqtt_client.connect(broker_ip, 1883, 60) 
+    # --------------------------------
+    
     mqtt_client.loop_start() 
     
     try:
@@ -129,7 +136,6 @@ def main():
         print("\n🛑 Program interrupted by the user. Shutting down...")
         mqtt_client.loop_stop()
         my_stream.close()
-
 
 if __name__ == '__main__':
     print('🚀 Starting Edge-to-Cloud Bridge (Mosquitto -> Firebase)')
