@@ -130,6 +130,7 @@ def main():
         mqtt_client.loop_stop()
         my_stream.close()
 
+
 if __name__ == '__main__':
     print('🚀 Starting Edge-to-Cloud Bridge (Mosquitto -> Firebase)')
     main()
