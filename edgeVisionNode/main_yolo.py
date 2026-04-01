@@ -157,6 +157,11 @@ while cap.isOpened():
 
     success, frame = cap.read()
     if not success: break
+    
+    # --- ROTATE CAMERA 2 ---
+    # Rotate 90 degrees to the left (counter-clockwise) if using camera ID 2
+    if cam_id == 2:
+        frame = cv2.rotate(frame, cv2.ROTATE_90_COUNTERCLOCKWISE)
 
     # Run YOLOv8 TRACKING with Pose Estimation
     results = model.track(frame, persist=True, classes=0, verbose=False)
