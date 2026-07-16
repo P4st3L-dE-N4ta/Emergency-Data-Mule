@@ -7,7 +7,7 @@ from ultralytics import YOLO
 # ==========================================================
 print("📷 Loading YOLOv8 Pose Model...")
 # Using the pose model to get skeletal keypoints
-model = YOLO('/home/ricardo/Documents/Emergency-Data-Mule/edgeVisionNode/models/yolov8n-pose.pt') 
+model = YOLO('/home/ricardolas/Documents/Emergency-Data-Mule/edgeVisionNode/models/yolov8n-pose.pt') 
 
 # Define the order of cameras to test
 camera_test_order = [2, 1, 0]
