@@ -5,3 +5,4 @@ edgeVisionNode/models
 cloudBridge/.env
 cloudBridge/firebase-service-key.json
 *.zip
+bin

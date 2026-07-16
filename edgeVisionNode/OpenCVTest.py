@@ -15,7 +15,7 @@ POSE_CONNECTIONS = [
 ]
 
 # 1. Download the model if it doesn't exist
-model_path = "/home/ricardo/Documents/Emergency-Data-Mule/edgeVisionNode/models/pose_landmarker.task"
+model_path = "/home/ricardolas/Documents/Emergency-Data-Mule/edgeVisionNode/models/pose_landmarker.task"
 if not os.path.exists(model_path):
     print("Downloading model...")
     model_url = "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/1/pose_landmarker_full.task"

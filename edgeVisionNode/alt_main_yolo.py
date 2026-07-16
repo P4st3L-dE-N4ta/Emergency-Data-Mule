@@ -71,7 +71,7 @@ except Exception as e:
 # 3. SETUP YOLOv8 POSE MODEL & MULTI-CAMERA FALLBACK
 # ==========================================================
 print("📷 Loading YOLOv8 Pose Model...")
-model = YOLO('/home/ricardo/Documents/Emergency-Data-Mule/edgeVisionNode/models/yolov8n-pose.pt') 
+model = YOLO('/home/ricardolas/Documents/Emergency-Data-Mule/edgeVisionNode/models/yolov8n-pose.pt') 
 
 camera_test_order = [2, 1, 0]
 cap = None
