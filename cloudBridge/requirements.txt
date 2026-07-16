@@ -1,0 +1,5 @@
+paho-mqtt
+firebase-admin
+python-dotenv
+pyrebase4
+
