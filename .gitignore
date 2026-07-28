@@ -9,5 +9,5 @@ venv*
 /cloudBridge/firebase-service-key.json
 *.zip
 /bin/
-__pycache__/
+/__pycache__/
 *.py[cod]
