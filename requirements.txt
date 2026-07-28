@@ -1,6 +1,0 @@
-opencv-python
-numpy
-pyserial
-pynmea2
-smbus2
-lgpio
