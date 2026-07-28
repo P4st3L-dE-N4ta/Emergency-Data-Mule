@@ -1,8 +1,13 @@
 # Git Ignore files
 venv*
-cellularGateway/MqttNBIoT/arduino_secrets.h
-edgeVisionNode/models
-cloudBridge/.env
-cloudBridge/firebase-service-key.json
+/cellularGateway/MqttNBIoT/arduino_secrets.h
+/cellularGateway/MqttNBIoT_UART/arduino_secrets.h
+/models/
+/edgeVisionNode/models/
+/cloudBridge/.env
+/cloudBridge/.env.*
+/cloudBridge/firebase-service-key.json
 *.zip
-bin
+/bin/
+__pycache__/
+*.py[cod]
