@@ -54,16 +54,17 @@ This path reflects the earlier modular node-based approach.
 
 ## Hardware notes
 
-The user should be aware of a few caveats for the correct functionning of the device:
+Please keep the following hardware caveats in mind for reliable operation of the system:
 
-- The Gmouse device should be connected and left outdoors for around 10 minutes for calibration before usage;
-- The camera wire extensions were soldered with swapped colors - be aware when connecting the device!
-- The camera heats up considerably, if a new support is to be fabricated, it should allow easy heat dissipation;
-- The pins of the motor control board were re-soldered and the identification text became hidden - refer to the hardware connections file [Motor Driver/](https://www.hiwonder.com/products/4-channel-encoder-motor-driver?_pos=1&_sid=17cccb2b4&_ss=r/);
-- If the remote commands are switched (throttle and/or steering in the wrong direction), it can be corrected in the "Differential drive kinematic mixing calculations" variables' algebraic signs.
-- When using the Arduino MKR NB 1500, because when trying to find an antenna to connect for the first time consumes a lot of electricity, it is advisable to have an external alimentation for it. 
-- DO NOT use the 5V pin in the motor driver in case of direct connection to a processing board. Read carefully the files available in the [manufacturers drive folder/](https://drive.google.com/drive/folders/1ZIbMQo2R2YOgqYN3d9nTgIqJnxlGbR8m/). 
-- In the case of the use of the Arduino, for some boards it might be necessary the use of pull-up resistors to not cause floating in the I2C. In the case of the Raspberry, there might be necessary the use of a voltage dividir due to the fact of the raspberry pins not being able to receive 5V. 
+- The Gmouse device should be connected and left outdoors for approximately 10 minutes to 15 minutes for calibration before use.
+- The camera wire extensions were soldered with swapped colors, so polarity should be verified carefully before connecting the device.
+- The camera can become quite hot, so any new support structure should allow for adequate heat dissipation.
+- The pins of the motor control board were re-soldered and the original identification markings are no longer visible; refer to the hardware connection documentation in the [motor driver product page](https://www.hiwonder.com/products/4-channel-encoder-motor-driver?_pos=1&_sid=17cccb2b4&_ss=r/).
+- If the remote control commands appear reversed (for example, throttle or steering in the wrong direction), this can usually be corrected by changing the sign of the differential-drive mixing terms.
+- When using the Arduino MKR NB 1500, the initial antenna search can draw significant current, so it is advisable to power the board from an external supply.
+- Do not use the 5 V pin of the motor driver for direct connection to a processing board. Please consult the manufacturer documentation in the [driver documentation folder](https://drive.google.com/drive/folders/1ZIbMQo2R2YOgqYN3d9nTgIqJnxlGbR8m/).
+- When using Arduino boards, pull-up resistors may be required on the I2C lines to prevent floating behavior. When using a Raspberry Pi, a voltage divider may be necessary because its GPIO pins cannot safely receive 5 V logic levels.
+- Wiring and circuit references are available in the project PDFs: [Materials and circuit diagram - Arduino.pdf](Materials%20and%20circuit%20diagram%20-%20Arduino.pdf) and [ElectricDiagram_Raspberry.pdf](ElectricDiagram_Raspberry.pdf).
 
 ## Useful links
 
