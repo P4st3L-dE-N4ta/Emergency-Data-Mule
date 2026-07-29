@@ -1,6 +1,6 @@
-# Emergency Data Mule
+# TITAN
 
-Emergency Data Mule is a terrestrial reconnaissance and emergency-response platform that combines rover control, edge perception, cellular telemetry, and cloud persistence. The repository supports two deployment styles:
+TITAN is a terrestrial reconnaissance and emergency-response platform that combines rover control, edge perception, cellular telemetry, and cloud persistence. The repository supports two deployment styles:
 
 - a centralized Raspberry Pi-based architecture for the current build
 - a modular Arduino-based architecture for experimentation and alternative deployments
@@ -51,3 +51,13 @@ This path reflects the earlier modular node-based approach.
 - The system uses MQTT for telemetry transport and Firebase for cloud visibility.
 - The perception pipeline relies on YOLO pose models and camera input.
 - Arduino secrets headers are intentionally kept separate from source code and should be configured per deployment.
+
+## Hardware notes
+
+The user should be aware of a few caveats for the correct functionning of the device:
+
+- The Gmouse device should be connected and left outdoors for around 10 minutes for calibration before usage;
+- The camera wire extensions were soldered with swapped colors - be aware when connecting the device!
+- The camera heats up considerably, if a new support is to be fabricated, it should allow easy heat dissipation;
+- The pins of the motor control board were re-soldered and the identification text became hidden - refer to the hardware connections file;
+- If the remote commands are switched (throttle and/or steering in the wrong direction), it can be corrected in the "Differential drive kinematic mixing calculations" variables' algebraic signs.
