@@ -61,3 +61,16 @@ The user should be aware of a few caveats for the correct functionning of the de
 - The camera heats up considerably, if a new support is to be fabricated, it should allow easy heat dissipation;
 - The pins of the motor control board were re-soldered and the identification text became hidden - refer to the hardware connections file;
 - If the remote commands are switched (throttle and/or steering in the wrong direction), it can be corrected in the "Differential drive kinematic mixing calculations" variables' algebraic signs.
+
+## Useful links
+
+Chassis 
+- https://www.hiwonder.com/products/suspended-shock-absorbing-tracked-chassis?variant=40378709835863 
+
+Motor control board
+- https://www.hiwonder.com/products/4-channel-encoder-motor-driver?_pos=1&_sid=17cccb2b4&_ss=r
+- https://drive.google.com/drive/folders/1ZIbMQo2R2YOgqYN3d9nTgIqJnxlGbR8m
+
+Receiver synchronization FS-iA6
+- youtube.com/watch?si=seeDfcXPnpqhOFPc&v=msGpx8vEHsQ&feature=youtu.be 
+
