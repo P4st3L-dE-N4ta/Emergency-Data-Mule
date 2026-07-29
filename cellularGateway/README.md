@@ -13,5 +13,5 @@ These sketches receive telemetry from the rover side over USB serial and publish
 
 ## Notes
 
-- The sketches rely on the Arduino secrets headers, especially [MqttNBIoT/arduino_secrets.h](MqttNBIoT/arduino_secrets.h) and [MqttNBIoT_UART/arduino_secrets.h](MqttNBIoT_UART/arduino_secrets.h).
+- The sketches rely on the Arduino secrets headers, especially [MqttNBIoT/arduino_secrets.h](MqttNBIoT/arduino_secrets_template.h) and [MqttNBIoT_UART/arduino_secrets.h](MqttNBIoT_UART/arduino_secrets_template.h).
 - The current Raspberry-compatible build uses the centralized architecture instead, but these firmware modules remain useful for modular or alternate deployments.

@@ -1,6 +1,6 @@
-# Emergency Data Mule
+# TITAN
 
-Emergency Data Mule is a terrestrial reconnaissance and emergency-response platform that combines rover control, edge perception, cellular telemetry, and cloud persistence. The repository supports two deployment styles:
+TITAN is a terrestrial reconnaissance and emergency-response platform that combines rover control, edge perception, cellular telemetry, and cloud persistence. The repository supports two deployment styles:
 
 - a centralized Raspberry Pi-based architecture for the current build
 - a modular Arduino-based architecture for experimentation and alternative deployments
@@ -51,3 +51,29 @@ This path reflects the earlier modular node-based approach.
 - The system uses MQTT for telemetry transport and Firebase for cloud visibility.
 - The perception pipeline relies on YOLO pose models and camera input.
 - Arduino secrets headers are intentionally kept separate from source code and should be configured per deployment.
+
+## Hardware notes
+
+The user should be aware of a few caveats for the correct functionning of the device:
+
+- The Gmouse device should be connected and left outdoors for around 10 minutes for calibration before usage;
+- The camera wire extensions were soldered with swapped colors - be aware when connecting the device!
+- The camera heats up considerably, if a new support is to be fabricated, it should allow easy heat dissipation;
+- The pins of the motor control board were re-soldered and the identification text became hidden - refer to the hardware connections file [Motor Driver/](https://www.hiwonder.com/products/4-channel-encoder-motor-driver?_pos=1&_sid=17cccb2b4&_ss=r/);
+- If the remote commands are switched (throttle and/or steering in the wrong direction), it can be corrected in the "Differential drive kinematic mixing calculations" variables' algebraic signs.
+- When using the Arduino MKR NB 1500, because when trying to find an antenna to connect for the first time consumes a lot of electricity, it is advisable to have an external alimentation for it. 
+- DO NOT use the 5V pin in the motor driver in case of direct connection to a processing board. Read carefully the files available in the [manufacturers drive folder/](https://drive.google.com/drive/folders/1ZIbMQo2R2YOgqYN3d9nTgIqJnxlGbR8m/). 
+- In the case of the use of the Arduino, for some boards it might be necessary the use of pull-up resistors to not cause floating in the I2C. In the case of the Raspberry, there might be necessary the use of a voltage dividir due to the fact of the raspberry pins not being able to receive 5V. 
+
+## Useful links
+
+Chassis 
+- https://www.hiwonder.com/products/suspended-shock-absorbing-tracked-chassis?variant=40378709835863 
+
+Motor control board
+- https://www.hiwonder.com/products/4-channel-encoder-motor-driver?_pos=1&_sid=17cccb2b4&_ss=r
+- https://drive.google.com/drive/folders/1ZIbMQo2R2YOgqYN3d9nTgIqJnxlGbR8m
+
+Receiver synchronization FS-iA6
+- youtube.com/watch?si=seeDfcXPnpqhOFPc&v=msGpx8vEHsQ&feature=youtu.be 
+
