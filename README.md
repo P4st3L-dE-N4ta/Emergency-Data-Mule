@@ -38,7 +38,6 @@ This path reflects the earlier modular node-based approach.
 - [RaspberryCentralized/](RaspberryCentralized/) – centralized rover control and sensing application for Raspberry Pi
 - [testsAndScripts/](testsAndScripts/) – debugging, simulation, and hardware test utilities
 - [models/](models/) – pretrained model files used by the vision stack
-- [bin/](bin/) – local Arduino CLI helper binary
 
 ## Recommended workflow
 
